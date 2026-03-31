@@ -91,11 +91,9 @@
 
 <script>
 function order(food){
-  // ⚠️ 這裡換成你的 Google 表單
-  const formURL = "https://docs.google.com/forms/d/e/你的表單ID/viewform?usp=pp_url";
+  const base = "https://docs.google.com/forms/d/e/1FAIpQLSfZnNtrTYSGluFMax8a8TaSRv7DagCJTZC5AuF9a4zkNC6gvg/viewform?usp=pp_url&entry.1961526679=";
 
-  // entry.xxx 要換成你的欄位ID
-  window.location.href = formURL + "&entry.123456=" + food;
+  window.location.href = base + encodeURIComponent(food);
 }
 </script>
 
